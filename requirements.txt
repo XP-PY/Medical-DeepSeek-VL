@@ -1,0 +1,16 @@
+torch==2.10.0
+transformers==4.38.2
+xformers>=0.0.21
+timm>=0.9.16
+accelerate
+datasets
+sentencepiece
+attrdict
+einops
+peft
+bitsandbytes
+pymupdf
+pillow
+gradio
+rapidfuzz
+tqdm
