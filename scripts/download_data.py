@@ -7,18 +7,25 @@ from src import env
 from datasets import load_dataset
 
 def main():
-    # Doc skills
-    load_dataset("echo840/OCRBench", split="test", cache_dir=env.DATA_DIR)                 # OCR benchmark  not needed here
-    load_dataset("HuggingFaceM4/ChartQA", split="train", cache_dir=env.DATA_DIR)
-    load_dataset("HuggingFaceM4/ChartQA", split="val", cache_dir=env.DATA_DIR)
+    success = False
 
-    # DocVQA without RRC login (HF formatted version)
-    load_dataset("lmms-lab/DocVQA", name="DocVQA", split="validation", cache_dir=env.DATA_DIR)            # :contentReference[oaicite:3]{index=3}
+    while not success:
+        try:
+            # Doc skills
+            load_dataset("echo840/OCRBench", split="test", cache_dir=env.DATA_DIR)
+            load_dataset("HuggingFaceM4/ChartQA", split="train", cache_dir=env.DATA_DIR)
+            load_dataset("HuggingFaceM4/ChartQA", split="val", cache_dir=env.DATA_DIR)
 
-    # Medical VQA from biomedical papers (HF mirror)
-    load_dataset("hamzamooraj99/PMC-VQA-1", split="train", cache_dir=env.DATA_DIR)         # :contentReference[oaicite:4]{index=4}
+            # DocVQA without RRC login (HF formatted version)
+            load_dataset("lmms-lab/DocVQA", name="DocVQA", split="validation", cache_dir=env.DATA_DIR)
 
-    print("All datasets downloaded into HF cache.")
+            # Medical VQA from biomedical papers (HF mirror)
+            load_dataset("hamzamooraj99/PMC-VQA-1", split="train", cache_dir=env.DATA_DIR)
+
+            print("All datasets downloaded into HF cache.")
+            success = True
+        except:
+            print("\n=============================== Try again ===============================\n")
 
 if __name__ == "__main__":
     main()

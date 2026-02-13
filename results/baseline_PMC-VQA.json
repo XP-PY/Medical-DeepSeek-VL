@@ -1,0 +1,359 @@
+{
+  "summary": {
+    "task": "PMC-VQA",
+    "n": 200,
+    "ACC": 0.38
+  },
+  "samples": [
+    {
+      "q": "What does the pink color indicate in panel D? ",
+      "gold_label": "D",
+      "pred_text": "D",
+      "pred_label": "D",
+      "acc": 1
+    },
+    {
+      "q": "What do the blue arrowheads indicate in the horizontal SD-OCT line scan through the fovea of the left eye? ",
+      "gold_label": "A",
+      "pred_text": "A",
+      "pred_label": "A",
+      "acc": 1
+    },
+    {
+      "q": " What does the MRI show in the cerebral hemispheres?",
+      "gold_label": "C",
+      "pred_text": "C",
+      "pred_label": "C",
+      "acc": 1
+    },
+    {
+      "q": "What is the K5/6 immunostaining level in image E? ",
+      "gold_label": "A",
+      "pred_text": "A",
+      "pred_label": "A",
+      "acc": 1
+    },
+    {
+      "q": " What is depicted in the images? ",
+      "gold_label": "B",
+      "pred_text": "C",
+      "pred_label": "C",
+      "acc": 0
+    },
+    {
+      "q": " What does the biopsy demonstrate? ",
+      "gold_label": "C",
+      "pred_text": "A",
+      "pred_label": "A",
+      "acc": 0
+    },
+    {
+      "q": " What was observed from the arrows in both CT images? ",
+      "gold_label": "D",
+      "pred_text": "A",
+      "pred_label": "A",
+      "acc": 0
+    },
+    {
+      "q": "What is the imaging modality used to obtain this image? ",
+      "gold_label": "A",
+      "pred_text": "A",
+      "pred_label": "A",
+      "acc": 1
+    },
+    {
+      "q": " What is the condition of the optic disc margin in the fundus photo? ",
+      "gold_label": "A",
+      "pred_text": "B",
+      "pred_label": "B",
+      "acc": 0
+    },
+    {
+      "q": " What is the marking which determines the SD side in the image? ",
+      "gold_label": "B",
+      "pred_text": "A",
+      "pred_label": "A",
+      "acc": 0
+    },
+    {
+      "q": "Which imaging system was used to obtain the reconstructed images in (b) and (c)? ",
+      "gold_label": "B",
+      "pred_text": "A",
+      "pred_label": "A",
+      "acc": 0
+    },
+    {
+      "q": " What is the ring-like appearance in the epiphysis seen in the radiograph called? ",
+      "gold_label": "D",
+      "pred_text": "B",
+      "pred_label": "B",
+      "acc": 0
+    },
+    {
+      "q": "Which structure is affected on this image? ",
+      "gold_label": "B",
+      "pred_text": "A",
+      "pred_label": "A",
+      "acc": 0
+    },
+    {
+      "q": "Which vein is affected by thrombosis in the given image? ",
+      "gold_label": "D",
+      "pred_text": "A",
+      "pred_label": "A",
+      "acc": 0
+    },
+    {
+      "q": "Which image shows a lower left third molar in a male subject? ",
+      "gold_label": "A",
+      "pred_text": "A",
+      "pred_label": "A",
+      "acc": 1
+    },
+    {
+      "q": " What feature of the tumor is shown in figures e and h?",
+      "gold_label": "C",
+      "pred_text": "A",
+      "pred_label": "A",
+      "acc": 0
+    },
+    {
+      "q": "What part of the body was imaged on presentation? ",
+      "gold_label": "A",
+      "pred_text": "B",
+      "pred_label": "B",
+      "acc": 0
+    },
+    {
+      "q": " What do the asterisks denote in the second image of TEM analysis? ",
+      "gold_label": "D",
+      "pred_text": "C",
+      "pred_label": "C",
+      "acc": 0
+    },
+    {
+      "q": " What is the name of the bone located at position number 3? ",
+      "gold_label": "C",
+      "pred_text": "C",
+      "pred_label": "C",
+      "acc": 1
+    },
+    {
+      "q": " What did the X-rays show? ",
+      "gold_label": "C",
+      "pred_text": "A",
+      "pred_label": "A",
+      "acc": 0
+    },
+    {
+      "q": "What does the right-side view show? ",
+      "gold_label": "C",
+      "pred_text": "C",
+      "pred_label": "C",
+      "acc": 1
+    },
+    {
+      "q": " What does the axial DWI show? ",
+      "gold_label": "A",
+      "pred_text": "A",
+      "pred_label": "A",
+      "acc": 1
+    },
+    {
+      "q": "What is the top row of the image showing? ",
+      "gold_label": "B",
+      "pred_text": "B",
+      "pred_label": "B",
+      "acc": 1
+    },
+    {
+      "q": " What histological feature can be observed in patient no. 2? ",
+      "gold_label": "A",
+      "pred_text": "A",
+      "pred_label": "A",
+      "acc": 1
+    },
+    {
+      "q": " Which side of the chest wall was the mass located on? ",
+      "gold_label": "B",
+      "pred_text": "B",
+      "pred_label": "B",
+      "acc": 1
+    },
+    {
+      "q": " What is the white arrow pointing to in the second CT image? ",
+      "gold_label": "D",
+      "pred_text": "A",
+      "pred_label": "A",
+      "acc": 0
+    },
+    {
+      "q": " What does panel E in the article show? ",
+      "gold_label": "C",
+      "pred_text": "A",
+      "pred_label": "A",
+      "acc": 0
+    },
+    {
+      "q": " What is the significance of the asterisks in Figure 1A and B? ",
+      "gold_label": "A",
+      "pred_text": "A",
+      "pred_label": "A",
+      "acc": 1
+    },
+    {
+      "q": " What is depicted in (M)-(P)? ",
+      "gold_label": "B",
+      "pred_text": "B",
+      "pred_label": "B",
+      "acc": 1
+    },
+    {
+      "q": "What is shown by the arrows in image C? ",
+      "gold_label": "D",
+      "pred_text": "C",
+      "pred_label": "C",
+      "acc": 0
+    },
+    {
+      "q": "Where are the calcifications located in the elbow joint? ",
+      "gold_label": "D",
+      "pred_text": "B",
+      "pred_label": "B",
+      "acc": 0
+    },
+    {
+      "q": "What type of tumour was found in the biopsy? ",
+      "gold_label": "D",
+      "pred_text": "C",
+      "pred_label": "C",
+      "acc": 0
+    },
+    {
+      "q": "What does the axial section show? ",
+      "gold_label": "C",
+      "pred_text": "C",
+      "pred_label": "C",
+      "acc": 1
+    },
+    {
+      "q": "What does Brain SPECT eZIS analysis in (c) reveal? ",
+      "gold_label": "C",
+      "pred_text": "A",
+      "pred_label": "A",
+      "acc": 0
+    },
+    {
+      "q": " What does the arrow indicate in image B? ",
+      "gold_label": "D",
+      "pred_text": "A",
+      "pred_label": "A",
+      "acc": 0
+    },
+    {
+      "q": " What is the appearance of the lesion on the CECT scan images? ",
+      "gold_label": "A",
+      "pred_text": "B",
+      "pred_label": "B",
+      "acc": 0
+    },
+    {
+      "q": "What does image B demonstrate? ",
+      "gold_label": "B",
+      "pred_text": "B",
+      "pred_label": "B",
+      "acc": 1
+    },
+    {
+      "q": " What is the injury seen on the MRI? ",
+      "gold_label": "B",
+      "pred_text": "A",
+      "pred_label": "A",
+      "acc": 0
+    },
+    {
+      "q": "Which A1 segment is normal in the images? ",
+      "gold_label": "A",
+      "pred_text": "A",
+      "pred_label": "A",
+      "acc": 1
+    },
+    {
+      "q": "What does the representative FACS plots in (b) show? ",
+      "gold_label": "B",
+      "pred_text": "A",
+      "pred_label": "A",
+      "acc": 0
+    },
+    {
+      "q": "What is depicted in image F? ",
+      "gold_label": "D",
+      "pred_text": "D",
+      "pred_label": "D",
+      "acc": 1
+    },
+    {
+      "q": " Which part of the breast contains the tumor? ",
+      "gold_label": "B",
+      "pred_text": "A",
+      "pred_label": "A",
+      "acc": 0
+    },
+    {
+      "q": " What is the ultrasound of the right kidney showing? ",
+      "gold_label": "B",
+      "pred_text": "A",
+      "pred_label": "A",
+      "acc": 0
+    },
+    {
+      "q": " What is the indication in the CT scan images? ",
+      "gold_label": "B",
+      "pred_text": "B",
+      "pred_label": "B",
+      "acc": 1
+    },
+    {
+      "q": "What is the name of the condition shown in the X-ray? ",
+      "gold_label": "A",
+      "pred_text": "A",
+      "pred_label": "A",
+      "acc": 1
+    },
+    {
+      "q": " What imaging technique was used to acquire the image? ",
+      "gold_label": "A",
+      "pred_text": "A",
+      "pred_label": "A",
+      "acc": 1
+    },
+    {
+      "q": "What is the name of the imaging technique used? ",
+      "gold_label": "B",
+      "pred_text": "B",
+      "pred_label": "B",
+      "acc": 1
+    },
+    {
+      "q": "What is the difference between figures (I) and (J)? ",
+      "gold_label": "A",
+      "pred_text": "A",
+      "pred_label": "A",
+      "acc": 1
+    },
+    {
+      "q": "Which of the following radiographs provides a detailed view of a specific tooth and its surrounding areas? ",
+      "gold_label": "D",
+      "pred_text": "A",
+      "pred_label": "A",
+      "acc": 0
+    },
+    {
+      "q": " What imaging was performed in both axial and coronal planes?",
+      "gold_label": "A",
+      "pred_text": "C",
+      "pred_label": "C",
+      "acc": 0
+    }
+  ]
+}

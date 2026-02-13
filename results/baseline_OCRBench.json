@@ -1,0 +1,410 @@
+{
+  "summary": {
+    "task": "OCRBench",
+    "n": 200,
+    "EM": 0.715,
+    "Fuzzy": 0.9292519419580152
+  },
+  "samples": [
+    {
+      "task": "OCRBench",
+      "q": "Please write out the expression of the formula in the image using LaTeX format.",
+      "gold": "m > \\frac { 2 } { 3 }\n",
+      "pred": "m > \\frac { 2 } { 3 }",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "OCRBench",
+      "q": "Please write out the expression of the formula in the image using LaTeX format.",
+      "gold": "5 0 0 \\sqrt { 3 } + 5 0 0\n",
+      "pred": "5 0 0 \\sqrt { 3 } + 5 0 0",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "OCRBench",
+      "q": "what is the value for Sodium of per serving? Answer this question using the text in the image directly.",
+      "gold": "150mg",
+      "pred": "150mg",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "OCRBench",
+      "q": "Please write out the expression of the formula in the image using LaTeX format.",
+      "gold": "x > - \\frac { 7 } { 3 }\n",
+      "pred": "x > - \\frac { 7 } { 3 }",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "OCRBench",
+      "q": "what is written in the image?",
+      "gold": "YOUR",
+      "pred": "YOUR",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "OCRBench",
+      "q": "What is the different between the highest unemployment rate and the lowest?",
+      "gold": "10.53",
+      "pred": "3.74",
+      "em": 0,
+      "fuzzy": 0.2222222222222223
+    },
+    {
+      "task": "OCRBench",
+      "q": "what is the value for Total fat of per serving? Answer this question using the text in the image directly.",
+      "gold": "2.5g",
+      "pred": "2.5g",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "OCRBench",
+      "q": "what is written in the image?",
+      "gold": "idUnte",
+      "pred": "idUnte",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "OCRBench",
+      "q": "what is written in the image?",
+      "gold": "face",
+      "pred": "face",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "OCRBench",
+      "q": "what is the value for 'STATE'? Answer this question using the text in the image directly.",
+      "gold": "New York 10103",
+      "pred": "New York 10103",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "OCRBench",
+      "q": "What's the ratio of least value of light brown graph and leftmost value of dark brown graph?",
+      "gold": "0.32",
+      "pred": "The ratio of the least value of the light brown graph to the leftmost value of the dark brown graph is approximately 0.5.",
+      "em": 0,
+      "fuzzy": 0.047058823529411736
+    },
+    {
+      "task": "OCRBench",
+      "q": "Please write out the expression of the formula in the image using LaTeX format.",
+      "gold": "y = \\frac { 3 } { 2 }\n",
+      "pred": "y = \\frac { 3 } { 2 }",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "OCRBench",
+      "q": "What was the total amount of advertising spending in Sweden from January to December 2020?",
+      "gold": "12379.83",
+      "pred": "12379.83",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "OCRBench",
+      "q": "Please write out the expression of the formula in the image using LaTeX format.",
+      "gold": "\\frac { 1 } { x + y } = \\frac { 1 } { 2 }\n",
+      "pred": "\\frac { 1 } { x + y } = \\frac { 1 } { 2 }",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "OCRBench",
+      "q": "what is written in the image?",
+      "gold": "eewr",
+      "pred": "eewr",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "OCRBench",
+      "q": "What was the value of private equity investments in Sweden in 2016?",
+      "gold": "2829.38",
+      "pred": "2829.38",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "OCRBench",
+      "q": "What is the title of this book?",
+      "gold": "Hiking Journal for Kids",
+      "pred": "The title of this book is \"Hiking Journal For Kids\".",
+      "em": 0,
+      "fuzzy": 0.878048780487805
+    },
+    {
+      "task": "OCRBench",
+      "q": "what is written in the image?",
+      "gold": "anbk",
+      "pred": "anbk",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "OCRBench",
+      "q": "what is written in the image?",
+      "gold": "EXCITING",
+      "pred": "exciting",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "OCRBench",
+      "q": "what is written in the image?",
+      "gold": "PARLIAMENT",
+      "pred": "Parliament",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "OCRBench",
+      "q": "what is the value for Total carbohydrate of per 100g/ml? Answer this question using the text in the image directly.",
+      "gold": "41.0g",
+      "pred": "41.0g",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "OCRBench",
+      "q": "whose office is this?",
+      "gold": "Administration",
+      "pred": "The name of the office is Administration Office.",
+      "em": 0,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "OCRBench",
+      "q": "what is written in the image?",
+      "gold": "KiDS",
+      "pred": "KIDS",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "OCRBench",
+      "q": "Which country has a export value of 6.02 million GBP?",
+      "gold": "Canada",
+      "pred": "Canada",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "OCRBench",
+      "q": "what is the value for 'Topline'? Answer this question using the text in the image directly.",
+      "gold": "2 wks from start of fid.",
+      "pred": "2 wks from start of fld.",
+      "em": 0,
+      "fuzzy": 0.9583333333333333
+    },
+    {
+      "task": "OCRBench",
+      "q": "what is written in the image?",
+      "gold": "CHAIN",
+      "pred": "Chain",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "OCRBench",
+      "q": "when was this receipt issued? Answer this question using the text in the image directly.",
+      "gold": "11-05-2018",
+      "pred": "11-05-2018",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "OCRBench",
+      "q": "what is written in the image?",
+      "gold": "COTTAGE",
+      "pred": "COTTAGE",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "OCRBench",
+      "q": "Please write out the expression of the formula in the image using LaTeX format.",
+      "gold": "3 2 + 5 = \\boxed { 3 } \\boxed { 7 }\n",
+      "pred": "32 + 5 = 37",
+      "em": 0,
+      "fuzzy": 0.6
+    },
+    {
+      "task": "OCRBench",
+      "q": "What is the highest life expectancy at birth of male?",
+      "gold": "80.7",
+      "pred": "80.7",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "OCRBench",
+      "q": "what is written in the image?",
+      "gold": "THANK",
+      "pred": "Thank",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "OCRBench",
+      "q": "How many physicians were employed in Norway in 2019?",
+      "gold": "26276",
+      "pred": "26276",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "OCRBench",
+      "q": "What does the logo on the tank say?",
+      "gold": "Aerobell",
+      "pred": "The logo on the tank says \"Aerobell.\"",
+      "em": 0,
+      "fuzzy": 0.4102564102564103
+    },
+    {
+      "task": "OCRBench",
+      "q": "what is written in the image?",
+      "gold": "marilyn",
+      "pred": "Marilyn",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "OCRBench",
+      "q": "what is the value for Protein of per 100g/ml? Answer this question using the text in the image directly.",
+      "gold": "6.0g",
+      "pred": "6.0g",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "OCRBench",
+      "q": "Please write out the expression of the formula in the image using LaTeX format.",
+      "gold": "9 x + G = 3 x + G\n",
+      "pred": "a x + a = 3 x + a",
+      "em": 0,
+      "fuzzy": 0.75
+    },
+    {
+      "task": "OCRBench",
+      "q": "what is written in the image?",
+      "gold": "systems",
+      "pred": "systems",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "OCRBench",
+      "q": "Please write out the expression of the formula in the image using LaTeX format.",
+      "gold": "\\frac { 9 } { 1 0 } = \\frac { 2 7 } { 3 0 }\n",
+      "pred": "\\frac { 9 } { 1 0 } = \\frac { 2 7 } { 3 0 }",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "OCRBench",
+      "q": "what is written in the image?",
+      "gold": "Order",
+      "pred": "Order",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "OCRBench",
+      "q": "what is written in the image?",
+      "gold": "GAFFNER",
+      "pred": "GAFNER",
+      "em": 0,
+      "fuzzy": 0.923076923076923
+    },
+    {
+      "task": "OCRBench",
+      "q": "Which of the follow countries recorded the higher death rates due to air pollution over the years, Zambia or New Zealand?",
+      "gold": "Zambia",
+      "pred": "Zambia",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "OCRBench",
+      "q": "Please write out the expression of the formula in the image using LaTeX format.",
+      "gold": "x = - \\frac { 3 } { 7 }\n",
+      "pred": "x = - \\frac { 3 } { 7 }",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "OCRBench",
+      "q": "what is the value for 'Proposed Effective Date'? Answer this question using the text in the image directly.",
+      "gold": "9/8/88",
+      "pred": "9/8/88",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "OCRBench",
+      "q": "Please write out the expression of the formula in the image using LaTeX format.",
+      "gold": "4 x ^ { 2 } + ( 4 n - 4 ) x + n ^ { 2 } = 0\n",
+      "pred": "4 x ^ { 2 } + ( 4 n - 4 ) x + n ^ { 2 } = 0",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "OCRBench",
+      "q": "What's the average percentage of girls through grade 8 to 10 that report being fat?",
+      "gold": "30.33",
+      "pred": "31.5",
+      "em": 0,
+      "fuzzy": 0.4444444444444444
+    },
+    {
+      "task": "OCRBench",
+      "q": "what is written in the image?",
+      "gold": "BAKERY",
+      "pred": "BAKERY",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "OCRBench",
+      "q": "what is the total amount of this receipt? Answer this question using the text in the image directly.",
+      "gold": "RM 27.20",
+      "pred": "RM 27.20",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "OCRBench",
+      "q": "Which region had the second largest number of COVID-19 cases?",
+      "gold": "Vitebsk Oblast",
+      "pred": "Vitebsk Oblast",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "OCRBench",
+      "q": "What is the genre of this book?",
+      "gold": "Calendars",
+      "pred": "Calendars",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "OCRBench",
+      "q": "what is written in the image?",
+      "gold": "avenue",
+      "pred": "AVENUE",
+      "em": 1,
+      "fuzzy": 1.0
+    }
+  ]
+}

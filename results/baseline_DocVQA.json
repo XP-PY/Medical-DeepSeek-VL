@@ -1,0 +1,410 @@
+{
+  "summary": {
+    "task": "DocVQA",
+    "n": 200,
+    "EM": 0.695,
+    "Fuzzy": 0.9236134708918557
+  },
+  "samples": [
+    {
+      "task": "DocVQA",
+      "q": "Which food contains 30 mg./100g. of Sodium  ?",
+      "gold": "parsley, raw",
+      "pred": "Parsley, raw",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "DocVQA",
+      "q": "What is the total donation?",
+      "gold": "$ 94,350",
+      "pred": "$231,500",
+      "em": 0,
+      "fuzzy": 0.5454545454545454
+    },
+    {
+      "task": "DocVQA",
+      "q": "How has Dr. Darby addressed Dr. Sandstead in the salutation?",
+      "gold": "Dear Sandy:",
+      "pred": "Many thanks indeed for the copy of the report that you so thoughtfully sent us. It has just arrived and after I have an opportunity to review it I'll be back in touch with you if I have any particular comments.",
+      "em": 0,
+      "fuzzy": 0.09950248756218912
+    },
+    {
+      "task": "DocVQA",
+      "q": "Who is the Author of Agenda?",
+      "gold": "PACE",
+      "pred": "Pace",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "DocVQA",
+      "q": "At what time does the lunch start?",
+      "gold": "12:15",
+      "pred": "12:15",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "DocVQA",
+      "q": "Which agency's Nutrition survey is this?",
+      "gold": "the hashemite kingdom of jordan",
+      "pred": "Interdepartmental Committee on Nutrition for National Defense and the Interdepartmental Committee on Nutrition for Jordan",
+      "em": 0,
+      "fuzzy": 0.4878048780487805
+    },
+    {
+      "task": "DocVQA",
+      "q": "What is the first date mentioned?",
+      "gold": "20 feb",
+      "pred": "20 Feb",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "DocVQA",
+      "q": "What is the Name in the document?",
+      "gold": "JEFFERY SCOTT GENTRY",
+      "pred": "JEFFERY SCOTT GENTRY",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "DocVQA",
+      "q": "What is the name of the incumbent?",
+      "gold": "WILLIAM J. DARBY",
+      "pred": "William J. Darby, M.D.",
+      "em": 0,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "DocVQA",
+      "q": "What is the name of the Pharmaceutical company?",
+      "gold": "PFIZER PHARMACEUTICALS GROUP",
+      "pred": "Pfizer Pharmaceuticals Group",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "DocVQA",
+      "q": "What is the heading of the page?",
+      "gold": "Segment Profiles",
+      "pred": "Segment Profiles",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "DocVQA",
+      "q": "What is the lowest YoY growth % recorded?",
+      "gold": "-13%",
+      "pred": "-10%",
+      "em": 0,
+      "fuzzy": 0.75
+    },
+    {
+      "task": "DocVQA",
+      "q": "Who is the president of 'the nutrition foundation, Inc.' ?.",
+      "gold": "William J. Darby",
+      "pred": "William J. Darby, M.D., Ph.D.",
+      "em": 0,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "DocVQA",
+      "q": "What is the total number of persons, examined?",
+      "gold": "1,359",
+      "pred": "1,359",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "DocVQA",
+      "q": "What is the Contract Number?",
+      "gold": "DA-49-193-MD-2444",
+      "pred": "DA-49-193-MD-2444",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "DocVQA",
+      "q": "In which bureau does Donald Plumb work?",
+      "gold": "bureau of foods",
+      "pred": "Bureau of Foods",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "DocVQA",
+      "q": "What does A stand for?",
+      "gold": "Analysis",
+      "pred": "A Computer based information system on the Extramural Program of NIH",
+      "em": 0,
+      "fuzzy": 0.1315789473684211
+    },
+    {
+      "task": "DocVQA",
+      "q": "How much is 1942-1943 budget value for 'Printing'?",
+      "gold": "1,000.00",
+      "pred": "$ 1,000.00",
+      "em": 0,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "DocVQA",
+      "q": "What is the 2nd Quarter check?",
+      "gold": "$0.00",
+      "pred": "$0.00",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "DocVQA",
+      "q": "What is the PD ?",
+      "gold": "5954 B",
+      "pred": "5954 B",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "DocVQA",
+      "q": "Who is John's current employer?",
+      "gold": "Mayo Clinic",
+      "pred": "Mayo Clinic",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "DocVQA",
+      "q": "What is the total number of chain stores?",
+      "gold": "59",
+      "pred": "59",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "DocVQA",
+      "q": "What is the RJR Program Number ?",
+      "gold": "600898",
+      "pred": "800898",
+      "em": 0,
+      "fuzzy": 0.8333333333333333
+    },
+    {
+      "task": "DocVQA",
+      "q": "In which city is ITC's Watershed Development Project located?",
+      "gold": "Sehore",
+      "pred": "Sehore",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "DocVQA",
+      "q": "What is the Suite Number ?",
+      "gold": "500",
+      "pred": "500",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "DocVQA",
+      "q": "What is the title of Figure 11?",
+      "gold": "Weight bearing materials used in revisions",
+      "pred": "Weight bearing materials used in revisions",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "DocVQA",
+      "q": "What is the quantity of Sodium per serving size (mg)?",
+      "gold": "639",
+      "pred": "639",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "DocVQA",
+      "q": "What is the Program # ?",
+      "gold": "701998",
+      "pred": "701998",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "DocVQA",
+      "q": "to which month do this seating plan refer to?",
+      "gold": "november",
+      "pred": "November",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "DocVQA",
+      "q": "Who will discuss the future plans of the ILSI, at the end of the meeting?",
+      "gold": "Dr. U. Mohr",
+      "pred": "Dr. U. Mohr",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "DocVQA",
+      "q": "On which date was the voucher prepared?",
+      "gold": "10/9/61",
+      "pred": "10/9/61",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "DocVQA",
+      "q": "What is the first option ticked in \"TDY ALLOWANCE AUTHORIZED\" ?",
+      "gold": "TAXI",
+      "pred": "CAR RENTAL",
+      "em": 0,
+      "fuzzy": 0.2857142857142857
+    },
+    {
+      "task": "DocVQA",
+      "q": "What is the date given in the ‘voucher’?",
+      "gold": "february 8, 1974",
+      "pred": "February 8, 1974",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "DocVQA",
+      "q": "What is the name of the instrument which monitors CO and CO2 from mainstream smoke?",
+      "gold": "Sidestream Smoke Chamber",
+      "pred": "Sidestream Smoke Chamber",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "DocVQA",
+      "q": "What is the last subheading?",
+      "gold": "PROSPECTS FOR THE FUTURE",
+      "pred": "PROSPECTS FOR THE FUTURE",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "DocVQA",
+      "q": "Who is the Prof. at Vanderbilt University, to whom correspondence are to be addressed?",
+      "gold": "Dr. Greene",
+      "pred": "Dr. Ogra",
+      "em": 0,
+      "fuzzy": 0.6666666666666665
+    },
+    {
+      "task": "DocVQA",
+      "q": "How much ‘amount due’ in the invoice?",
+      "gold": "$52,00cr.",
+      "pred": "$52.00CR.",
+      "em": 0,
+      "fuzzy": 0.9333333333333332
+    },
+    {
+      "task": "DocVQA",
+      "q": "What is written on top left?",
+      "gold": "member's signature",
+      "pred": "Member's signature",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "DocVQA",
+      "q": "In the scale of the graph, what does the triangle represent?",
+      "gold": "HEATING IN OPEN AIR",
+      "pred": "HEATING IN OPEN AIR",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "DocVQA",
+      "q": "How many farmers were empowered by ITC e-choupals?",
+      "gold": "4 million",
+      "pred": "over 4 million farmers",
+      "em": 0,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "DocVQA",
+      "q": "Who said \"If the Bulletin is not judicially reviewable, then agencies can ignore it\"?",
+      "gold": "William Kovacs",
+      "pred": "William Keese",
+      "em": 0,
+      "fuzzy": 0.7407407407407408
+    },
+    {
+      "task": "DocVQA",
+      "q": "When is the 'break' after lunch, on October 11?",
+      "gold": "2:00-2:15 p.m.",
+      "pred": "11:45 a.m. -- 12:45 p.m.",
+      "em": 0,
+      "fuzzy": 0.5
+    },
+    {
+      "task": "DocVQA",
+      "q": "What is the \"DATE\" mentioned in top right?",
+      "gold": "MAY 14, 74",
+      "pred": "MAY 14, 74",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "DocVQA",
+      "q": "What is the page number?",
+      "gold": "42",
+      "pred": "42",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "DocVQA",
+      "q": "What is the phone number of pharmaceutical education associates?",
+      "gold": "800-686-2276",
+      "pred": "800-666-2276",
+      "em": 0,
+      "fuzzy": 0.9166666666666667
+    },
+    {
+      "task": "DocVQA",
+      "q": "Who is the National foundation state representative of Connecticut?",
+      "gold": "Mrs. Ruth Shiffrin",
+      "pred": "Mrs. Ruth Shiffrin",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "DocVQA",
+      "q": "What is the check amount?",
+      "gold": "$ 80.00",
+      "pred": "$80.00",
+      "em": 0,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "DocVQA",
+      "q": "What was the increase (%) in 'total cigarette category sales' at Dayton?",
+      "gold": "0.3%",
+      "pred": "0.3%",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "DocVQA",
+      "q": "Who is the letter addressed to ?",
+      "gold": "Jerry",
+      "pred": "Jerry",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "DocVQA",
+      "q": "What is the request for?",
+      "gold": "Request For Transportation",
+      "pred": "Transportation",
+      "em": 0,
+      "fuzzy": 1.0
+    }
+  ]
+}

@@ -1,0 +1,410 @@
+{
+  "summary": {
+    "task": "ChartQA",
+    "n": 200,
+    "EM": 0.625,
+    "Fuzzy": 0.7973253707645647
+  },
+  "samples": [
+    {
+      "task": "ChartQA",
+      "q": "What was the value of the pizza delivery market in the UK at the end of 2017?",
+      "gold": "6.2",
+      "pred": "2.1",
+      "em": 0,
+      "fuzzy": 0.33333333333333326
+    },
+    {
+      "task": "ChartQA",
+      "q": "What is the smallest value represented",
+      "gold": "9",
+      "pred": "9",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "ChartQA",
+      "q": "Is Croatia global hunger index extremely alarminhg?",
+      "gold": "No",
+      "pred": "No",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "ChartQA",
+      "q": "What was Russia's fertility rate in 2020?",
+      "gold": "1.74",
+      "pred": "1.74",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "ChartQA",
+      "q": "What is the ratio of fixed broadband in the years 2018 and 2019?",
+      "gold": "1",
+      "pred": "1.",
+      "em": 0,
+      "fuzzy": 0.6666666666666665
+    },
+    {
+      "task": "ChartQA",
+      "q": "Which year recorded the least daily hempseed production in Europe?",
+      "gold": "1990",
+      "pred": "1985",
+      "em": 0,
+      "fuzzy": 0.5
+    },
+    {
+      "task": "ChartQA",
+      "q": "What was the value of reward-based crowdfunding deals in 2018?",
+      "gold": "175.4",
+      "pred": "62.4",
+      "em": 0,
+      "fuzzy": 0.4444444444444444
+    },
+    {
+      "task": "ChartQA",
+      "q": "How much were the gate receipts of the St. Louis Cardinals in 2019?",
+      "gold": "138",
+      "pred": "138",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "ChartQA",
+      "q": "What segment represent by dark grey color?",
+      "gold": "Both",
+      "pred": "They just get caught more often because they're under greater scrutiny",
+      "em": 0,
+      "fuzzy": 0.10958904109589042
+    },
+    {
+      "task": "ChartQA",
+      "q": "What percentage of internet-users said they used WhatsApp in the 3rd quarter of 2020?",
+      "gold": "87",
+      "pred": "87",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "ChartQA",
+      "q": "How man years does the graph represent?",
+      "gold": "11",
+      "pred": "10",
+      "em": 0,
+      "fuzzy": 0.5
+    },
+    {
+      "task": "ChartQA",
+      "q": "What's the ratio(A:B) of the largest value and the rightmost value in WHO category?",
+      "gold": "0.084027778",
+      "pred": "2:20",
+      "em": 0,
+      "fuzzy": 0.1428571428571429
+    },
+    {
+      "task": "ChartQA",
+      "q": "Find out , who is referred in blue?",
+      "gold": "620",
+      "pred": "Partner (husband, boyfriend)",
+      "em": 0,
+      "fuzzy": 0.0
+    },
+    {
+      "task": "ChartQA",
+      "q": "What is the difference between the first and last year's results?",
+      "gold": "2.95",
+      "pred": "3.05",
+      "em": 0,
+      "fuzzy": 0.5
+    },
+    {
+      "task": "ChartQA",
+      "q": "What is the difference of shares of Private motor insurers?",
+      "gold": "4",
+      "pred": "4%",
+      "em": 0,
+      "fuzzy": 0.6666666666666665
+    },
+    {
+      "task": "ChartQA",
+      "q": "How many pharmacists were there in Germany in 2018?",
+      "gold": "54493",
+      "pred": "54382",
+      "em": 0,
+      "fuzzy": 0.6
+    },
+    {
+      "task": "ChartQA",
+      "q": "What is the sum of Lago di Bolsena and Lago di Bracciano ?",
+      "gold": "306",
+      "pred": "306",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "ChartQA",
+      "q": "The value is 40.49, find the category?",
+      "gold": "Kidney cancer",
+      "pred": "Kidney cancer",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "ChartQA",
+      "q": "What company had the highest percentage of smartphone device visits?",
+      "gold": "Telco",
+      "pred": "Telco",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "ChartQA",
+      "q": "How much money did nonprofit organizations report to the IRS in 2016?",
+      "gold": "2.62",
+      "pred": "2.62",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "ChartQA",
+      "q": "What's the total Economic growth forecast after the COVID-19 outbreak in Denmark in 2020",
+      "gold": "2.5",
+      "pred": "1.5",
+      "em": 0,
+      "fuzzy": 0.6666666666666665
+    },
+    {
+      "task": "ChartQA",
+      "q": "What was the combined percentage of the business and professional and not specified purposes?",
+      "gold": "17",
+      "pred": "17%",
+      "em": 0,
+      "fuzzy": 0.8
+    },
+    {
+      "task": "ChartQA",
+      "q": "Is the median of green bars greater than the median of the blue bar?",
+      "gold": "No",
+      "pred": "No",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "ChartQA",
+      "q": "What was Debenhams revenue in the UK in the year ending September 1st 2018?",
+      "gold": "1832.7",
+      "pred": "1832.7",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "ChartQA",
+      "q": "What was Whistles turnover in 2016?",
+      "gold": "33",
+      "pred": "58.5",
+      "em": 0,
+      "fuzzy": 0.0
+    },
+    {
+      "task": "ChartQA",
+      "q": "What's the lowest value of the light blue bar?",
+      "gold": "8",
+      "pred": "8",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "ChartQA",
+      "q": "What is the sum of undernourished people in Low Income economies and Sub-Saharan Africa combined (in millions)?",
+      "gold": "341.9",
+      "pred": "341.9",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "ChartQA",
+      "q": "Which state had the highest number of turkeys raised in 2018?",
+      "gold": "Minnesota",
+      "pred": "Minnesota",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "ChartQA",
+      "q": "What is the total of Bad and Good in the Remain?",
+      "gold": "100",
+      "pred": "100",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "ChartQA",
+      "q": "How many response options are below 150 n mi?",
+      "gold": "2",
+      "pred": "There are two response options below 150 n mi.",
+      "em": 0,
+      "fuzzy": 0.0
+    },
+    {
+      "task": "ChartQA",
+      "q": "What's the total add up value of japan and Colombia?",
+      "gold": "51.7",
+      "pred": "51.7k",
+      "em": 0,
+      "fuzzy": 0.8888888888888888
+    },
+    {
+      "task": "ChartQA",
+      "q": "What is the average  of females value in the first five region,  from Yorkshire and the humber to south west?",
+      "gold": "9.8",
+      "pred": "9.4",
+      "em": 0,
+      "fuzzy": 0.6666666666666665
+    },
+    {
+      "task": "ChartQA",
+      "q": "Is the highest value of Myanmar greater than 30000?",
+      "gold": "Yes",
+      "pred": "No",
+      "em": 0,
+      "fuzzy": 0.0
+    },
+    {
+      "task": "ChartQA",
+      "q": "How many global subscribers did World of Warcraft have in 2015?",
+      "gold": "5.5",
+      "pred": "5.5",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "ChartQA",
+      "q": "By how much is 2 persons higher than that of 1 person?",
+      "gold": "34960",
+      "pred": "35860",
+      "em": 0,
+      "fuzzy": 0.6
+    },
+    {
+      "task": "ChartQA",
+      "q": "How much did the sales of cat treats amount to in 2010?",
+      "gold": "0.45",
+      "pred": "The sales of cat treats amounted to approximately $1 billion in 2010.",
+      "em": 0,
+      "fuzzy": 0.05555555555555557
+    },
+    {
+      "task": "ChartQA",
+      "q": "How many reals would come from the city government's budget?",
+      "gold": "42",
+      "pred": "42",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "ChartQA",
+      "q": "What was Nigeria's male population in 2019?",
+      "gold": "101.83",
+      "pred": "101.83",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "ChartQA",
+      "q": "Which colored segment occupies more than half the pie chart?",
+      "gold": "blue",
+      "pred": "Accessories",
+      "em": 0,
+      "fuzzy": 0.13333333333333328
+    },
+    {
+      "task": "ChartQA",
+      "q": "Who says Good more to the question?",
+      "gold": "General public",
+      "pred": "Foreign policy experts",
+      "em": 0,
+      "fuzzy": 0.4444444444444444
+    },
+    {
+      "task": "ChartQA",
+      "q": "What was the average transaction value in grocers in prior weeks?",
+      "gold": "49",
+      "pred": "The average transaction value in grocers was 49 U.S. dollars in prior weeks.",
+      "em": 0,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "ChartQA",
+      "q": "How much did accounts with 1,000 to 10,000 followers increase their followers on average?",
+      "gold": "12.6",
+      "pred": "15.9",
+      "em": 0,
+      "fuzzy": 0.5
+    },
+    {
+      "task": "ChartQA",
+      "q": "In what year did the turnover of the retail sale of leisure products increase to 6.7 billion British pounds?",
+      "gold": "2017",
+      "pred": "2017",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "ChartQA",
+      "q": "What percentage of all underlying attributable profit for Banco Santander is attributed to South America?",
+      "gold": "42",
+      "pred": "42%",
+      "em": 0,
+      "fuzzy": 0.8
+    },
+    {
+      "task": "ChartQA",
+      "q": "How much money was generated by sports equipment retailing in Austria in 2015?",
+      "gold": "1841.1",
+      "pred": "1841.1",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "ChartQA",
+      "q": "What age group does the Red bar Show in the graph?",
+      "gold": "15-17 years",
+      "pred": "15-17 years",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "ChartQA",
+      "q": "Who has hit the most home runs in Chicago White Sox franchise history?",
+      "gold": "Frank Thomas",
+      "pred": "Frank Thomas",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "ChartQA",
+      "q": "Which beer brand topped the beer production volume in Germany in 2016?",
+      "gold": "Krombacher",
+      "pred": "Krombacher",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "ChartQA",
+      "q": "Who has the most hits in Detroit Tigers franchise history?",
+      "gold": "Ty Cobb",
+      "pred": "Ty Cobb",
+      "em": 1,
+      "fuzzy": 1.0
+    },
+    {
+      "task": "ChartQA",
+      "q": "What is the difference between maximum number of Gucci stores operated in Emerging Countries over the years and minimum number of stores operated in Western Europe over the years?",
+      "gold": "123",
+      "pred": "The difference between the maximum number of Gucci stores operated in Emerging Countries (529) and the minimum number of stores operated in Western Europe (105) is 424.",
+      "em": 0,
+      "fuzzy": 0.030769230769230802
+    }
+  ]
+}
