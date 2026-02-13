@@ -15,12 +15,14 @@ def main():
             load_dataset("echo840/OCRBench", split="test", cache_dir=env.DATA_DIR)
             load_dataset("HuggingFaceM4/ChartQA", split="train", cache_dir=env.DATA_DIR)
             load_dataset("HuggingFaceM4/ChartQA", split="val", cache_dir=env.DATA_DIR)
+            # load_dataset("HuggingFaceM4/ChartQA", split="test", cache_dir=env.DATA_DIR)
 
             # DocVQA without RRC login (HF formatted version)
             load_dataset("lmms-lab/DocVQA", name="DocVQA", split="validation", cache_dir=env.DATA_DIR)
 
             # Medical VQA from biomedical papers (HF mirror)
             load_dataset("hamzamooraj99/PMC-VQA-1", split="train", cache_dir=env.DATA_DIR)
+            # load_dataset("hamzamooraj99/PMC-VQA-1", split="test", cache_dir=env.DATA_DIR)
 
             print("All datasets downloaded into HF cache.")
             success = True
