@@ -137,6 +137,45 @@ def convert_generic(
         })
     return out
 
+def convert_generic_(
+    ds,
+    prefix_train: str,
+    prefix_val: str,
+    max_samples_train: int,
+    max_samples_val: int,
+    shuffle_seed: int,
+    mcq: bool = False
+) -> List[Dict[str, Any]]:
+    ds_shuffle = ds.shuffle(seed=shuffle_seed)
+
+    def sample(prefix, start_idx, count):
+        out = []
+        sub_ds = ds_shuffle.select(range(start_idx, start_idx + count))
+        for i, ex in enumerate(tqdm(sub_ds, desc=f"Convert {prefix}")):
+            img = pick_image(ex)
+            q = pick_question(ex)
+            a = pick_answer(ex)
+            if img is None or q is None or a is None:
+                continue
+            if mcq:
+                A = safe_str(ex.get("Choice A"))
+                B = safe_str(ex.get("Choice B"))
+                C = safe_str(ex.get("Choice C"))
+                D = safe_str(ex.get("Choice D"))
+                q = build_mcq_prompt(safe_str(q), A, B, C, D)
+            out.append({
+                "id": make_id(prefix, i),
+                "image_pil": img,
+                "prompt": f"<image>\n{safe_str(q)}",
+                "response": safe_str(a),
+                "meta": {"source": prefix, "mcq": mcq}
+            })
+        return out
+
+    out_train = sample(prefix_train, 0, max_samples_train)
+    out_val = sample(prefix_val, max_samples_train, max_samples_val)
+    return out_train, out_val
+
 def convert_pmc_vqa(
     ds,
     prefix: str,
@@ -218,10 +257,10 @@ def main():
     parser.add_argument("--image_dir", type=str, default="images_mix")
 
     # sample counts
-    parser.add_argument("--train_chartqa", type=int, default=30000)
-    parser.add_argument("--train_ocrbench", type=int, default=10000)
-    parser.add_argument("--train_docvqa", type=int, default=20000)
-    parser.add_argument("--train_pmc", type=int, default=10000)
+    parser.add_argument("--train_chartqa", type=int, default=28300)
+    parser.add_argument("--train_ocrbench", type=int, default=1000)
+    parser.add_argument("--train_docvqa", type=int, default=5350)
+    parser.add_argument("--train_pmc", type=int, default=154000)
 
     parser.add_argument("--val_each", type=int, default=500)  # per dataset
     parser.add_argument("--seed", type=int, default=42)
@@ -248,22 +287,39 @@ def main():
     # ----------------------------
     # Build TRAIN mix
     # ----------------------------
-    train_rows = []
-    train_rows += convert_generic(chart_train, "chartqa", args.train_chartqa, args.seed)
-    train_rows += convert_generic(ocr_test, "ocrbench", args.train_ocrbench, args.seed + 1)
-    train_rows += convert_generic(docvqa_val, "docvqa", args.train_docvqa, args.seed + 2)
-    train_rows += convert_generic(pmc_train, "pmcvqa", args.train_pmc, args.seed + 3, mcq=True)
-    # train_rows += convert_pmc_vqa(pmc_train, "pmcvqa", args.train_pmc, args.seed + 3, label_as_response=args.pmc_label_response)
+    # train_rows = []
+    # train_rows += convert_generic(chart_train, "chartqa", args.train_chartqa, args.seed)
+    # train_rows += convert_generic(ocr_test, "ocrbench", args.train_ocrbench, args.seed + 1)
+    # train_rows += convert_generic(docvqa_val, "docvqa", args.train_docvqa, args.seed + 2)
+    # train_rows += convert_generic(pmc_train, "pmcvqa", args.train_pmc, args.seed + 3, mcq=True)
+    # # train_rows += convert_pmc_vqa(pmc_train, "pmcvqa", args.train_pmc, args.seed + 3, label_as_response=args.pmc_label_response)
+
+    # # ----------------------------
+    # # Build VAL mix (smaller, balanced)
+    # # ----------------------------
+    # val_rows = []
+    # val_rows += convert_generic(chart_val, "chartqa_val", args.val_each, args.seed)
+    # val_rows += convert_generic(ocr_test, "ocrbench_val", args.val_each, args.seed + 1)
+    # val_rows += convert_generic(docvqa_val, "docvqa_val", args.val_each, args.seed + 2)
+    # val_rows += convert_generic(pmc_train, "pmcvqa_val", args.val_each, args.seed + 3, mcq=True)
+    # # val_rows += convert_pmc_vqa(pmc_train, "pmcvqa_val", args.val_each, args.seed + 3, label_as_response=args.pmc_label_response)
 
     # ----------------------------
-    # Build VAL mix (smaller, balanced)
+    # Build TRAIN and VAL mix
     # ----------------------------
-    val_rows = []
-    val_rows += convert_generic(chart_val, "chartqa_val", args.val_each, args.seed)
-    val_rows += convert_generic(ocr_test, "ocrbench_val", args.val_each, args.seed + 1)
-    val_rows += convert_generic(docvqa_val, "docvqa_val", args.val_each, args.seed + 2)
-    val_rows += convert_generic(pmc_train, "pmcvqa_val", args.val_each, args.seed + 3, mcq=True)
-    # val_rows += convert_pmc_vqa(pmc_train, "pmcvqa_val", args.val_each, args.seed + 3, label_as_response=args.pmc_label_response)
+    train_rows, val_rows = [], []
+    train_data, val_data = convert_generic_(chart_train, "chartqa", "chartqa_val", args.train_chartqa, args.val_each, args.seed)
+    train_rows += train_data
+    val_rows += val_data
+    train_data, val_data = convert_generic_(ocr_test, "ocrbench", "ocrbench_val", args.train_ocrbench, args.val_each, args.seed)
+    train_rows += train_data
+    val_rows += val_data
+    train_data, val_data = convert_generic_(docvqa_val, "docvqa", "docvqa_val", args.train_docvqa, args.val_each, args.seed)
+    train_rows += train_data
+    val_rows += val_data
+    train_data, val_data = convert_generic_(pmc_train, "pmcvqa", "pmcvqa_val", args.train_pmc, args.val_each, args.seed, mcq=True)
+    train_rows += train_data
+    val_rows += val_data
 
     # ----------------------------
     # Materialize images

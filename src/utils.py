@@ -12,6 +12,28 @@ sys.path.insert(0, str(git_repo_path))
 from deepseek_vl2.models import DeepseekVLV2Processor, DeepseekVLV2ForCausalLM  # type: ignore
 from deepseek_vl2.utils.io import load_pil_images   # type: ignore
 
+def _to_rgb(im: Image.Image) -> Image.Image:
+    return im.convert("RGB") if isinstance(im, Image.Image) and im.mode != "RGB" else im
+
+def load_model(MODEL_ID: str = "deepseek-ai/deepseek-vl2-tiny") -> Tuple[
+    DeepseekVLV2Processor,      # Processor
+    LlamaTokenizerFast,         # tokenizer
+    DeepseekVLV2ForCausalLM,    # Model
+    Callable[[list], list]      # load_pil_images Function
+]:
+    MODEL_ID = os.path.join(env.MODEL_DIR, MODEL_ID)
+    vl_chat_processor: DeepseekVLV2Processor = DeepseekVLV2Processor.from_pretrained(MODEL_ID)
+    tokenizer = vl_chat_processor.tokenizer
+
+    vl_gpt: DeepseekVLV2ForCausalLM = AutoModelForCausalLM.from_pretrained(MODEL_ID, trust_remote_code=True)
+    vl_gpt = vl_gpt.to(torch.bfloat16).cuda().eval()
+
+    return vl_chat_processor, tokenizer, vl_gpt, load_pil_images
+
+# =====================================================================================
+#                               custom_processor
+# =====================================================================================
+
 class custom_processor:
     def __init__(self, vl_chat_processor):
         self.vl_chat_processor = vl_chat_processor
@@ -41,6 +63,18 @@ class custom_processor:
         inputs_embeds = vl_gpt.prepare_inputs_embeds(**prepare_inputs)
 
         return inputs_embeds, prepare_inputs, prepare_inputs.attention_mask
+    
+def load_model_processor(MODEL_ID: str = "deepseek-ai/deepseek-vl2-tiny", dtype = torch.bfloat16):
+    MODEL_ID = os.path.join(env.MODEL_DIR, MODEL_ID)
+    vl_chat_processor: DeepseekVLV2Processor = DeepseekVLV2Processor.from_pretrained(MODEL_ID)
+    vl_gpt: DeepseekVLV2ForCausalLM = AutoModelForCausalLM.from_pretrained(MODEL_ID, trust_remote_code=True)
+    vl_gpt = vl_gpt.to(dtype).cuda()
+    processor = custom_processor(vl_chat_processor)
+    return vl_gpt, processor
+
+# =====================================================================================
+#                                   Wrapper
+# =====================================================================================
 
 class DeepSeekVL2Wrapper:
     def __init__(self, model_dir: str, dtype=torch.bfloat16, device="cuda"):
@@ -125,35 +159,6 @@ class DeepSeekVL2Wrapper:
         decoded = decoded.replace(self.tokenizer.eos_token, "").strip()
 
         return decoded
-
-def _to_rgb(pil_img: Image.Image) -> Image.Image:
-    # Handles RGBA, LA, P (palette), etc.
-    if pil_img.mode != "RGB":
-        return pil_img.convert("RGB")
-    return pil_img
-
-def load_model(MODEL_ID: str = "deepseek-ai/deepseek-vl2-tiny") -> Tuple[
-    DeepseekVLV2Processor,      # Processor
-    LlamaTokenizerFast,         # tokenizer
-    DeepseekVLV2ForCausalLM,    # Model
-    Callable[[list], list]      # load_pil_images Function
-]:
-    MODEL_ID = os.path.join(env.MODEL_DIR, MODEL_ID)
-    vl_chat_processor: DeepseekVLV2Processor = DeepseekVLV2Processor.from_pretrained(MODEL_ID)
-    tokenizer = vl_chat_processor.tokenizer
-
-    vl_gpt: DeepseekVLV2ForCausalLM = AutoModelForCausalLM.from_pretrained(MODEL_ID, trust_remote_code=True)
-    vl_gpt = vl_gpt.to(torch.bfloat16).cuda().eval()
-
-    return vl_chat_processor, tokenizer, vl_gpt, load_pil_images
-
-def load_model_processor(MODEL_ID: str = "deepseek-ai/deepseek-vl2-tiny", dtype = torch.bfloat16):
-    MODEL_ID = os.path.join(env.MODEL_DIR, MODEL_ID)
-    vl_chat_processor: DeepseekVLV2Processor = DeepseekVLV2Processor.from_pretrained(MODEL_ID)
-    vl_gpt: DeepseekVLV2ForCausalLM = AutoModelForCausalLM.from_pretrained(MODEL_ID, trust_remote_code=True)
-    vl_gpt = vl_gpt.to(dtype).cuda()
-    processor = custom_processor(vl_chat_processor)
-    return vl_gpt, processor
 
 def load_model_wrapper(MODEL_ID="deepseek-ai/deepseek-vl2-tiny", dtype=torch.bfloat16, device="cuda"):
     model_dir = os.path.join(env.MODEL_DIR, MODEL_ID)  # keep your env logic

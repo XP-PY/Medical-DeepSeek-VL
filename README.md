@@ -15,4 +15,4 @@
 | **Simple Test** | Test base function (env.py/utils.py) | Run DeepSeeK-VL2 successfully |
 | **Download datasets** | Download open source datasets ([OCRBench](https://huggingface.co/datasets/echo840/OCRBench)/[ChartQA](https://huggingface.co/datasets/HuggingFaceM4/ChartQA)/[DocVQA](https://huggingface.co/datasets/lmms-lab/DocVQA)/[PMC-VQA](https://huggingface.co/datasets/hamzamooraj99/PMC-VQA-1)) | Three **doc skills datasets** and one **medical domain dataset** |
 | **Baseline evaluation** | Baseline evaluation (zero-shot) on small subsets | OCRBench/ChartQA/DocVQA metric: EM/Fuzzy; PMC-VQA metric: MCQ Accuracy |
-| **Build mix train/val dataset** | Sample data from OCRBench/ChartQA/DocVQA/PMC-VQA to build train/val dataset | **Doc skill (60%):** ChartQA + DocVQA-style; **OCR robustness (20%):** OCRBench-like; **Medical domain (20%):** PMC-VQA |
+| **Build mix train/val dataset** | Sample data from OCRBench/ChartQA/DocVQA/PMC-VQA to build train/val dataset | **Train data nummber:** 92000; **Val data nummber:** 2000 |
