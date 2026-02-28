@@ -13,30 +13,8 @@ from pathlib import Path
 project_root = Path(__file__).parent.parent
 sys.path.insert(0, str(project_root))
 # from src import utils, data_collator_deepseek_vl2
-from src.utils import load_model
+from src.utils import load_model, JsonlVLDataset
 from src.data_collator_deepseek_vl2 import DeepSeekVL2DataCollator
-
-
-class JsonlVLDataset(Dataset):
-    def __init__(self, jsonl_path: str):
-        self.rows = []
-        with open(jsonl_path, "r", encoding="utf-8") as f:
-            for line in f:
-                self.rows.append(json.loads(line))
-
-    def __len__(self):
-        return len(self.rows)
-
-    def __getitem__(self, idx):
-        r = self.rows[idx]
-        img = Image.open(r["image"]).convert("RGB")
-        return {
-            "image_pil": img,
-            "prompt": r["prompt"],
-            "response": r["response"],
-            "id": r.get("id", str(idx)),
-        }
-
 
 def find_lora_targets(model):
     """
@@ -52,6 +30,7 @@ def main():
     ap.add_argument("--train_jsonl", type=str, required=True)
     ap.add_argument("--val_jsonl", type=str, required=True)
     ap.add_argument("--out_dir", type=str, default="checkpoints/lora_docqa_med_hf")
+    ap.add_argument("--resume", type=str, default=None, help="Resume from checkpoint: pass a path or 'True' for latest.")
 
     ap.add_argument("--lr", type=float, default=2e-4)
     ap.add_argument("--epochs", type=int, default=1)
@@ -124,7 +103,10 @@ def main():
         data_collator=collator,
     )
 
-    trainer.train()
+    resume_from_checkpoint = args.resume
+    if resume_from_checkpoint == "True":
+        resume_from_checkpoint = True   # Automutically find newest checkpoint in output_dir
+    trainer.train(resume_from_checkpoint=resume_from_checkpoint)
 
     # Save adapter
     model.save_pretrained(args.out_dir)

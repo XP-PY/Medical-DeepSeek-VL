@@ -14,12 +14,13 @@ MODEL_ID = env.MODEL_ID
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--model_ID", type=str, default="deepseek-ai/deepseek-vl2-tiny")
+    ap.add_argument("--lora_path", type=str, required=True)
     ap.add_argument("--val_jsonl", type=str, required=True)
     ap.add_argument("--out_dir", type=str, default=True)
     args = ap.parse_args()
 
     # model
-    wrapper = utils.load_model_wrapper(args.model_ID, dtype=torch.bfloat16)
+    wrapper = utils.load_model_loRAwrapper(args.model_ID, lora_path=args.lora_path, dtype=torch.bfloat16)
 
     # dataset
     val_ds = utils.JsonlVLDataset(args.val_jsonl)
@@ -55,7 +56,7 @@ def main():
 
     # Write in JSON file
     os.makedirs(args.out_dir, exist_ok=True)
-    with open(f"{args.out_dir}/baseline_eval.jsonl", "w", encoding="utf-8") as f:
+    with open(f"{args.out_dir}/finetuned_eval.jsonl", "w", encoding="utf-8") as f:
         for row in rows:
             f.write(json.dumps(row, ensure_ascii=False) + "\n")
 
@@ -91,10 +92,10 @@ def main():
             print(f"Average Fuzzy F1: {avg_fz:.4f}")
             print('='*20, '\n\n')
 
-    with open(f"{args.out_dir}/baseline_eval_summary.jsonl", "w", encoding="utf-8") as f:
+    with open(f"{args.out_dir}/finetuned_eval_summary.jsonl", "w", encoding="utf-8") as f:
         json.dump(summary, f, ensure_ascii=False, indent=2)
 
-    print(f"The results have been saved to {args.out_dir}/baseline_eval.jsonl and {args.out_dir}/baseline_eval_summary.jsonl.")
+    print(f"The results have been saved to {args.out_dir}/finetuned_eval.jsonl and {args.out_dir}/finetuned_eval_summary.jsonl.")
     
 if __name__ == "__main__":
     main()

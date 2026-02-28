@@ -1,0 +1,25 @@
+{
+  "chartqa": {
+    "task": "chartqa",
+    "Count": 500,
+    "EM": 0.526,
+    "Fuzzy": 0.8305666127032602
+  },
+  "ocrbench": {
+    "task": "ocrbench",
+    "Count": 500,
+    "EM": 0.424,
+    "Fuzzy": 0.9040317167235438
+  },
+  "docvqa": {
+    "task": "docvqa",
+    "Count": 500,
+    "EM": 0.122,
+    "Fuzzy": 0.8862376093617456
+  },
+  "pmcvqa": {
+    "task": "pmcvqa",
+    "Count": 500,
+    "ACC": 0.48
+  }
+}
