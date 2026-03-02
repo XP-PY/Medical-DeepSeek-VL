@@ -15,3 +15,5 @@ pillow
 gradio
 rapidfuzz
 tqdm
+requests
+lxml

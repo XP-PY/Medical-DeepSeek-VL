@@ -31,6 +31,7 @@
 |           **Training**          | LoRA fine-tune DeepSeek-VL2              | ✅                                 |
 |     **Baseline evaluation**     | Zero-shot on val subsets                 | ✅                                 |
 |    **Fine-tuned evaluation**    | Evaluate LoRA model on same subsets      | ✅                                 |
+|          **Add RAG**            | RAG corpus built from open-access biomedical literature (PMC OA) and public guideline repositories (CDC/WHO), respecting license terms. | 🔜                                |
 |          **Iteration**          | rebalance mixture + output normalization | 🔜                                |
 |             **Demo**            | Gradio PDF QA + evidence                 | 🔜                                |
 
@@ -76,7 +77,7 @@ This behavior usually indicates **domain/task overfitting** or **format bias** d
 3. **Imbalanced mixture / sampling**: even if the dataset counts look okay, training steps may still skew heavily toward one source (especially if shuffled without per-source weighting).
 4. **Label masking / SFT boundary errors** can silently damage supervised learning (less likely since PMC improved, but still worth checking).
 
----
+--- -->
 
 # Next Iteration (Planned Improvements)
 
@@ -108,7 +109,7 @@ Deploy a Gradio demo:
 * PDF upload → page rendering → OCR/text-block extraction → retrieval → VL answer
 * Show **Answer + Evidence** (page index + retrieved snippet)
 
---- -->
+<!-- ---
 
 # Project Pipeline
 
@@ -122,4 +123,4 @@ Deploy a Gradio demo:
 
 * Trained doc-understanding on DocVQA/ChartQA/OCRBench
 * Added PMC-VQA to inject biomedical terminology + paper-style figures/tables
-* Final system answers questions over medical PDFs with evidence via RAG (in progress)
+* Final system answers questions over medical PDFs with evidence via RAG (in progress) -->

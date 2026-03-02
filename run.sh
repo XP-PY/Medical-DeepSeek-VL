@@ -59,3 +59,6 @@ CUDA_VISIBLE_DEVICES=3 python scripts/eval_finetuned.py \
   --lora_path output/checkpoints/lora_docqa_med_hf_92000 \
   --val_jsonl data/val_mix.jsonl \
   --out_dir results
+
+# Download RAG corpus
+python scripts/download_pmc_oa_1k.py
