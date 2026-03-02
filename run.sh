@@ -3,10 +3,15 @@ conda create --name deepseek-vl2 python=3.10
 conda activate deepseek-vl2
 pip install -r requirements.txt
 
-# Simple Test
+# Git Deepseek-VL2 repo
+mkdir GitRepo
+cd GitRepo
+git clone https://github.com/deepseek-ai/DeepSeek-VL2.git
+
+# Simple Test to Verify DeepSeek-VL2 inference
 python scripts/smoke_infer.py
 
-# Download datasets
+# Download fine-tuning datasets
 python scripts/download_data.py
 
 # Build mix train/val dataset
@@ -60,5 +65,30 @@ CUDA_VISIBLE_DEVICES=3 python scripts/eval_finetuned.py \
   --val_jsonl data/val_mix.jsonl \
   --out_dir results
 
-# Download RAG corpus
+# Download RAG corpus (Create a downloader that fetches 1,000 OA packages)
 python scripts/download_pmc_oa_1k.py
+
+# Extract text for RAG (from the tgz packages)
+python scripts/extract_pmc_xml_text.py
+
+# If get 'Bad archives' when 'Extract text for RAG', Re-download corrupted archives and Extract again
+python scripts/redownload_bad_pmc.py
+python scripts/extract_pmc_xml_text.py
+
+# Build the index script
+python scripts/build_faiss_index.py \
+  --chunks_jsonl corpus/pmc_oa_1k/chunks.jsonl \
+  --out_dir corpus/pmc_oa_1k \
+  --embed_model BAAI/bge-small-en-v1.5 \
+  --index_type flatip \
+  --batch_size 128
+
+# Fine-tuned model evaluation with RAG
+CUDA_VISIBLE_DEVICES=3 python scripts/eval_finetuned_with_rag.py \
+  --model_ID deepseek-ai/deepseek-vl2-tiny \
+  --lora_path output/checkpoints/lora_docqa_med_hf_92000 \
+  --val_jsonl data/val_mix.jsonl \
+  --out_dir results \
+  --faiss_index corpus/pmc_oa_1k/faiss.index \
+  --meta_jsonl corpus/pmc_oa_1k/chunks_meta.jsonl \
+  --topk 5

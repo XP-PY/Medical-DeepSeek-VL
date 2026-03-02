@@ -16,4 +16,8 @@ gradio
 rapidfuzz
 tqdm
 requests
+beautifulsoup4
 lxml
+sentence-transformers
+faiss-cpu
+# faiss-gpu

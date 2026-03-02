@@ -16,7 +16,7 @@ def main():
     ap.add_argument("--model_ID", type=str, default="deepseek-ai/deepseek-vl2-tiny")
     ap.add_argument("--lora_path", type=str, required=True)
     ap.add_argument("--val_jsonl", type=str, required=True)
-    ap.add_argument("--out_dir", type=str, default=True)
+    ap.add_argument("--out_dir", type=str, required=True)
     args = ap.parse_args()
 
     # model

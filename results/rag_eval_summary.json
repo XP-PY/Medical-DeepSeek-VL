@@ -1,0 +1,7 @@
+{
+  "pmcvqa": {
+    "task": "pmcvqa",
+    "Count": 500,
+    "ACC": 0.426
+  }
+}
